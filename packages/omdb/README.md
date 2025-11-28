@@ -44,23 +44,23 @@ http://www.omdbapi.com/?i=tt3896198&apikey=MY_API_KEY
 ## Quick Start
 
 ```typescript
-import { NodeHttpClient } from "@effect/platform-node";
-import { OmdbClient, OmdbConfig } from "@movie-effect/omdb";
-import { Console, Effect } from "effect";
+import { NodeHttpClient } from '@effect/platform-node'
+import { OmdbClient, OmdbConfig } from '@movie-effect/omdb'
+import { Console, Effect } from 'effect'
 
-const program = Effect.gen(function* () {
-  const client = yield* OmdbClient;
-  const movie = yield* client.getByTitle("Inception");
-  yield* Console.log(movie.Title, movie.Year);
-});
+const program = Effect.gen(function*() {
+  const client = yield* OmdbClient
+  const movie = yield* client.getByTitle('Inception')
+  yield* Console.log(movie.Title, movie.Year)
+})
 
 const runnable = program.pipe(
   Effect.provide(OmdbClient.Default),
-  Effect.provide(OmdbConfig.layer({ apiKey: "your-api-key" })),
+  Effect.provide(OmdbConfig.layer({ apiKey: 'your-api-key' })),
   Effect.provide(NodeHttpClient.layer),
-);
+)
 
-Effect.runPromise(runnable);
+Effect.runPromise(runnable)
 ```
 
 ## API Coverage
@@ -81,10 +81,8 @@ Effect.runPromise(runnable);
 [npm-badge]: https://img.shields.io/npm/v/@movie-effect/omdb.svg
 [npm-url]: https://www.npmjs.com/package/@movie-effect/omdb
 [license-badge]: https://img.shields.io/badge/License-MIT-yellow.svg
-[license-url]:
-  https://github.com/kevinmichaelchen/moviedb-effect/blob/main/LICENSE.md
+[license-url]: https://github.com/kevinmichaelchen/moviedb-effect/blob/main/LICENSE.md
 [effect]: https://effect.website/
 [omdb-api]: https://www.omdbapi.com/
-[cli]:
-  https://github.com/kevinmichaelchen/moviedb-effect/tree/main/packages/omdb-cli
+[cli]: https://github.com/kevinmichaelchen/moviedb-effect/tree/main/packages/omdb-cli
 [core]: https://www.npmjs.com/package/@movie-effect/core

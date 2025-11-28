@@ -43,5 +43,3 @@ import { ... } from '@movie-effect/core'
 [tmdb]: https://www.npmjs.com/package/@movie-effect/tmdb
 [omdb]: https://www.npmjs.com/package/@movie-effect/omdb
 [watchmode]: https://www.npmjs.com/package/@movie-effect/watchmode
-[license]:
-  https://github.com/kevinmichaelchen/moviedb-effect/blob/main/LICENSE.md

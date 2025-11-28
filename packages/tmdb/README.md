@@ -39,23 +39,23 @@ export TMDB_API_KEY="your-bearer-token"
 ## Quick Start
 
 ```typescript
-import { NodeHttpClient } from "@effect/platform-node";
-import { TmdbClient, TmdbConfig } from "@movie-effect/tmdb";
-import { Console, Effect } from "effect";
+import { NodeHttpClient } from '@effect/platform-node'
+import { TmdbClient, TmdbConfig } from '@movie-effect/tmdb'
+import { Console, Effect } from 'effect'
 
-const program = Effect.gen(function* () {
-  const client = yield* TmdbClient;
-  const movie = yield* client.movie.getDetails(550); // Fight Club
-  yield* Console.log(movie.title);
-});
+const program = Effect.gen(function*() {
+  const client = yield* TmdbClient
+  const movie = yield* client.movie.getDetails(550) // Fight Club
+  yield* Console.log(movie.title)
+})
 
 const runnable = program.pipe(
   Effect.provide(TmdbClient.Default),
-  Effect.provide(TmdbConfig.layer({ apiKey: "your-api-key" })),
+  Effect.provide(TmdbConfig.layer({ apiKey: 'your-api-key' })),
   Effect.provide(NodeHttpClient.layer),
-);
+)
 
-Effect.runPromise(runnable);
+Effect.runPromise(runnable)
 ```
 
 ## API Coverage
@@ -77,10 +77,8 @@ Effect.runPromise(runnable);
 [npm-badge]: https://img.shields.io/npm/v/@movie-effect/tmdb.svg
 [npm-url]: https://www.npmjs.com/package/@movie-effect/tmdb
 [license-badge]: https://img.shields.io/badge/License-MIT-yellow.svg
-[license-url]:
-  https://github.com/kevinmichaelchen/moviedb-effect/blob/main/LICENSE.md
+[license-url]: https://github.com/kevinmichaelchen/moviedb-effect/blob/main/LICENSE.md
 [effect]: https://effect.website/
 [tmdb-api]: https://developer.themoviedb.org/
-[cli]:
-  https://github.com/kevinmichaelchen/moviedb-effect/tree/main/packages/tmdb-cli
+[cli]: https://github.com/kevinmichaelchen/moviedb-effect/tree/main/packages/tmdb-cli
 [core]: https://www.npmjs.com/package/@movie-effect/core

@@ -38,23 +38,23 @@ export WATCHMODE_API_KEY="your-api-key"
 ## Quick Start
 
 ```typescript
-import { NodeHttpClient } from "@effect/platform-node";
-import { WatchmodeClient, WatchmodeConfig } from "@movie-effect/watchmode";
-import { Console, Effect } from "effect";
+import { NodeHttpClient } from '@effect/platform-node'
+import { WatchmodeClient, WatchmodeConfig } from '@movie-effect/watchmode'
+import { Console, Effect } from 'effect'
 
-const program = Effect.gen(function* () {
-  const client = yield* WatchmodeClient;
-  const sources = yield* client.getSources();
-  yield* Console.log(sources);
-});
+const program = Effect.gen(function*() {
+  const client = yield* WatchmodeClient
+  const sources = yield* client.getSources()
+  yield* Console.log(sources)
+})
 
 const runnable = program.pipe(
   Effect.provide(WatchmodeClient.Default),
-  Effect.provide(WatchmodeConfig.layer({ apiKey: "your-api-key" })),
+  Effect.provide(WatchmodeConfig.layer({ apiKey: 'your-api-key' })),
   Effect.provide(NodeHttpClient.layer),
-);
+)
 
-Effect.runPromise(runnable);
+Effect.runPromise(runnable)
 ```
 
 ## API Coverage
@@ -75,10 +75,8 @@ Effect.runPromise(runnable);
 [npm-badge]: https://img.shields.io/npm/v/@movie-effect/watchmode.svg
 [npm-url]: https://www.npmjs.com/package/@movie-effect/watchmode
 [license-badge]: https://img.shields.io/badge/License-MIT-yellow.svg
-[license-url]:
-  https://github.com/kevinmichaelchen/moviedb-effect/blob/main/LICENSE.md
+[license-url]: https://github.com/kevinmichaelchen/moviedb-effect/blob/main/LICENSE.md
 [effect]: https://effect.website/
 [watchmode-api]: https://api.watchmode.com/
-[cli]:
-  https://github.com/kevinmichaelchen/moviedb-effect/tree/main/packages/watchmode-cli
+[cli]: https://github.com/kevinmichaelchen/moviedb-effect/tree/main/packages/watchmode-cli
 [core]: https://www.npmjs.com/package/@movie-effect/core
