@@ -16,15 +16,7 @@
       "entry": ["src/index.ts", "tests/**/*.test.ts"],
       "project": ["src/**/*.ts", "tests/**/*.ts"]
     },
-    "packages/trakt": {
-      "entry": ["src/index.ts", "tests/**/*.test.ts"],
-      "project": ["src/**/*.ts", "tests/**/*.ts"]
-    },
     "packages/watchmode": {
-      "entry": ["src/index.ts", "tests/**/*.test.ts"],
-      "project": ["src/**/*.ts", "tests/**/*.ts"]
-    },
-    "packages/letterboxd": {
       "entry": ["src/index.ts", "tests/**/*.test.ts"],
       "project": ["src/**/*.ts", "tests/**/*.ts"]
     },
@@ -36,15 +28,7 @@
       "entry": ["src/index.ts"],
       "project": ["src/**/*.ts"]
     },
-    "packages/trakt-cli": {
-      "entry": ["src/index.ts"],
-      "project": ["src/**/*.ts"]
-    },
     "packages/watchmode-cli": {
-      "entry": ["src/index.ts"],
-      "project": ["src/**/*.ts"]
-    },
-    "packages/letterboxd-cli": {
       "entry": ["src/index.ts"],
       "project": ["src/**/*.ts"]
     }

@@ -9,12 +9,8 @@
     { "path": "./packages/tmdb-cli" },
     { "path": "./packages/omdb" },
     { "path": "./packages/omdb-cli" },
-    { "path": "./packages/trakt" },
-    { "path": "./packages/trakt-cli" },
     { "path": "./packages/watchmode" },
-    { "path": "./packages/watchmode-cli" },
-    { "path": "./packages/letterboxd" },
-    { "path": "./packages/letterboxd-cli" }
+    { "path": "./packages/watchmode-cli" }
   ],
   "files": []
 }

@@ -22,12 +22,8 @@
       "@movie-effect/tmdb-cli": ["packages/tmdb-cli/src/index.ts"],
       "@movie-effect/omdb": ["packages/omdb/src/index.ts"],
       "@movie-effect/omdb-cli": ["packages/omdb-cli/src/index.ts"],
-      "@movie-effect/trakt": ["packages/trakt/src/index.ts"],
-      "@movie-effect/trakt-cli": ["packages/trakt-cli/src/index.ts"],
       "@movie-effect/watchmode": ["packages/watchmode/src/index.ts"],
-      "@movie-effect/watchmode-cli": ["packages/watchmode-cli/src/index.ts"],
-      "@movie-effect/letterboxd": ["packages/letterboxd/src/index.ts"],
-      "@movie-effect/letterboxd-cli": ["packages/letterboxd-cli/src/index.ts"]
+      "@movie-effect/watchmode-cli": ["packages/watchmode-cli/src/index.ts"]
     },
 
     /* Type Safety */

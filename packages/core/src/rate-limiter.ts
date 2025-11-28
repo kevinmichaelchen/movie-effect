@@ -107,10 +107,6 @@ export const RateLimitPresets = {
   tmdb: { requestsPerSecond: 50 },
   /** OMDB: 1000 requests per day (conservative: ~1 per 90s) */
   omdb: { requestsPerSecond: 1 },
-  /** Trakt: 1000 requests per 5 minutes (~3 per second) */
-  trakt: { requestsPerSecond: 3 },
   /** WatchMode: varies by plan, default conservative */
   watchmode: { requestsPerSecond: 1 },
-  /** Letterboxd: unknown, conservative default */
-  letterboxd: { requestsPerSecond: 1 },
 } as const satisfies Record<string, RateLimiterConfig>

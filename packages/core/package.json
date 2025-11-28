@@ -22,9 +22,7 @@
     "effect",
     "tmdb",
     "omdb",
-    "trakt",
-    "watchmode",
-    "letterboxd"
+    "watchmode"
   ],
   "bugs": {
     "url": "https://github.com/kevinmichaelchen/moviedb-effect/issues"

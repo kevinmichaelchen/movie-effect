@@ -1,6 +1,6 @@
 {
   "name": "movie-effect-monorepo",
-  "description": "Effect-based clients for movie APIs (TMDB, OMDB, Trakt, WatchMode, Letterboxd)",
+  "description": "Effect-based clients for movie APIs (TMDB, OMDB, WatchMode)",
   "private": true,
   "type": "module",
   "scripts": {

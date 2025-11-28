@@ -78,27 +78,6 @@ importers:
         specifier: ^3.19.6
         version: 3.19.6
 
-  packages/letterboxd:
-    dependencies:
-      '@movie-effect/core':
-        specifier: workspace:*
-        version: link:../core
-      effect:
-        specifier: ^3.19.6
-        version: 3.19.6
-
-  packages/letterboxd-cli:
-    dependencies:
-      '@effect/cli':
-        specifier: ^0.72.1
-        version: 0.72.1(@effect/platform@0.93.4(effect@3.19.6))(@effect/printer-ansi@0.47.0(@effect/typeclass@0.38.0(effect@3.19.6))(effect@3.19.6))(@effect/printer@0.47.0(@effect/typeclass@0.38.0(effect@3.19.6))(effect@3.19.6))(effect@3.19.6)
-      '@effect/platform-node':
-        specifier: ^0.101.1
-        version: 0.101.2(@effect/cluster@0.53.6(@effect/platform@0.93.4(effect@3.19.6))(@effect/rpc@0.72.2(@effect/platform@0.93.4(effect@3.19.6))(effect@3.19.6))(@effect/sql@0.48.0(@effect/experimental@0.57.4(@effect/platform@0.93.4(effect@3.19.6))(effect@3.19.6))(@effect/platform@0.93.4(effect@3.19.6))(effect@3.19.6))(@effect/workflow@0.13.0(@effect/experimental@0.57.4(@effect/platform@0.93.4(effect@3.19.6))(effect@3.19.6))(@effect/platform@0.93.4(effect@3.19.6))(@effect/rpc@0.72.2(@effect/platform@0.93.4(effect@3.19.6))(effect@3.19.6))(effect@3.19.6))(effect@3.19.6))(@effect/platform@0.93.4(effect@3.19.6))(@effect/rpc@0.72.2(@effect/platform@0.93.4(effect@3.19.6))(effect@3.19.6))(@effect/sql@0.48.0(@effect/experimental@0.57.4(@effect/platform@0.93.4(effect@3.19.6))(effect@3.19.6))(@effect/platform@0.93.4(effect@3.19.6))(effect@3.19.6))(effect@3.19.6)
-      effect:
-        specifier: ^3.19.6
-        version: 3.19.6
-
   packages/omdb:
     dependencies:
       '@effect/platform':
@@ -164,27 +143,6 @@ importers:
       dotenv:
         specifier: ^16.4.7
         version: 16.4.7
-      effect:
-        specifier: ^3.19.6
-        version: 3.19.6
-
-  packages/trakt:
-    dependencies:
-      '@movie-effect/core':
-        specifier: workspace:*
-        version: link:../core
-      effect:
-        specifier: ^3.19.6
-        version: 3.19.6
-
-  packages/trakt-cli:
-    dependencies:
-      '@effect/cli':
-        specifier: ^0.72.1
-        version: 0.72.1(@effect/platform@0.93.4(effect@3.19.6))(@effect/printer-ansi@0.47.0(@effect/typeclass@0.38.0(effect@3.19.6))(effect@3.19.6))(@effect/printer@0.47.0(@effect/typeclass@0.38.0(effect@3.19.6))(effect@3.19.6))(effect@3.19.6)
-      '@effect/platform-node':
-        specifier: ^0.101.1
-        version: 0.101.2(@effect/cluster@0.53.6(@effect/platform@0.93.4(effect@3.19.6))(@effect/rpc@0.72.2(@effect/platform@0.93.4(effect@3.19.6))(effect@3.19.6))(@effect/sql@0.48.0(@effect/experimental@0.57.4(@effect/platform@0.93.4(effect@3.19.6))(effect@3.19.6))(@effect/platform@0.93.4(effect@3.19.6))(effect@3.19.6))(@effect/workflow@0.13.0(@effect/experimental@0.57.4(@effect/platform@0.93.4(effect@3.19.6))(effect@3.19.6))(@effect/platform@0.93.4(effect@3.19.6))(@effect/rpc@0.72.2(@effect/platform@0.93.4(effect@3.19.6))(effect@3.19.6))(effect@3.19.6))(effect@3.19.6))(@effect/platform@0.93.4(effect@3.19.6))(@effect/rpc@0.72.2(@effect/platform@0.93.4(effect@3.19.6))(effect@3.19.6))(@effect/sql@0.48.0(@effect/experimental@0.57.4(@effect/platform@0.93.4(effect@3.19.6))(effect@3.19.6))(@effect/platform@0.93.4(effect@3.19.6))(effect@3.19.6))(effect@3.19.6)
       effect:
         specifier: ^3.19.6
         version: 3.19.6

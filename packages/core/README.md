@@ -34,9 +34,7 @@ import { ... } from '@movie-effect/core'
 
 - [@movie-effect/tmdb][tmdb] - TMDB API client
 - [@movie-effect/omdb][omdb] - OMDB API client
-- [@movie-effect/trakt][trakt] - Trakt API client
 - [@movie-effect/watchmode][watchmode] - Watchmode API client
-- [@movie-effect/letterboxd][letterboxd] - Letterboxd API client
 
 ## License
 
@@ -44,8 +42,6 @@ import { ... } from '@movie-effect/core'
 
 [tmdb]: https://www.npmjs.com/package/@movie-effect/tmdb
 [omdb]: https://www.npmjs.com/package/@movie-effect/omdb
-[trakt]: https://www.npmjs.com/package/@movie-effect/trakt
 [watchmode]: https://www.npmjs.com/package/@movie-effect/watchmode
-[letterboxd]: https://www.npmjs.com/package/@movie-effect/letterboxd
 [license]:
   https://github.com/kevinmichaelchen/moviedb-effect/blob/main/LICENSE.md
