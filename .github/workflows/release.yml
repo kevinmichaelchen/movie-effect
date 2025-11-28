@@ -9,8 +9,11 @@ on:
         required: false
         default: false
         type: boolean
-  # Auto-release when commits are pushed to main
-  push:
+  # Auto-release after CI passes on main
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
     branches:
       - main
 
@@ -20,18 +23,24 @@ permissions:
 
 env:
   NX_TUI: "false"
+  LEFTHOOK: "0" # Skip pre-commit hooks in CI (checks already ran)
 
 jobs:
   release:
     runs-on: ubuntu-latest
-    # Skip if commit is from the release bot (prevents infinite loop)
-    if: github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, 'chore(release)')
+    # Run on manual trigger OR when CI succeeds (skip release bot commits to prevent loops)
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       !contains(github.event.workflow_run.head_commit.message, 'chore(release)'))
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
+          # For workflow_run, checkout the commit that triggered CI
+          ref: ${{ github.event.workflow_run.head_sha || github.ref }}
 
       - name: Setup Git
         run: |
@@ -61,7 +70,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Release
-        if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && !inputs.dry-run)
+        if: github.event_name == 'workflow_run' || (github.event_name == 'workflow_dispatch' && !inputs.dry-run)
         run: pnpm nx release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
