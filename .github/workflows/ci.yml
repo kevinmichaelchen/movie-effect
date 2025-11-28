@@ -27,17 +27,20 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Derive SHAs for nx affected
+        uses: nrwl/nx-set-shas@v4
+
       - name: Typecheck
         run: pnpm typecheck
 
       - name: Lint
-        run: pnpm lint
+        run: npx nx affected -t lint
 
       - name: Format check
         run: pnpm format:check
 
       - name: Build
-        run: pnpm build
+        run: npx nx affected -t build
 
       - name: Unit tests
-        run: pnpm test:unit
+        run: npx nx affected -t test:unit
