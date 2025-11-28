@@ -39,8 +39,8 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
-          # For workflow_run, checkout the commit that triggered CI
-          ref: ${{ github.event.workflow_run.head_sha || github.ref }}
+          # For workflow_run, checkout the branch (not detached HEAD)
+          ref: ${{ github.event.workflow_run.head_branch || github.ref }}
 
       - name: Setup Git
         run: |
